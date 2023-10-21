@@ -68,13 +68,28 @@ class BTTraversals{
         if(root == NULL){
             root = new BinaryTree(data);
             return root;
-        }else if(root -> left == NULL){
-            root->left=new BinaryTree(data);
-            return root;
-        }else{
-            root -> right = new BinaryTree(data);
-            return root;
         }
+        queue<BinaryTree*>q;
+        q.push(root);
+        while(!q.empty()){
+            BinaryTree* f=q.front();
+            q.pop();
+            if(f->left == NULL){
+                BinaryTree* ptr=new BinaryTree(data);
+                f->left=ptr;
+                return root;
+            }else{
+                q.push(f->left);
+            }
+            if(f->right == NULL){
+                BinaryTree* ptr=new BinaryTree(data);
+                f->right=ptr;
+                return root;
+            }else{
+                q.push(f->right);
+            }
+        }
+        return root;
     }
     
 };

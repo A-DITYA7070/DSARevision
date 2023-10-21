@@ -31,12 +31,13 @@
     We need a visited array initialized to 0, representing the nodes that are not visited.
     Run the for loop looping from 0 to N, and call the DFS for the first unvisited node. 
     DFS function call will make sure that it starts the DFS call from that unvisited node,
-     and visits all the nodes that are in that province, and at the same time, it will also mark them as visited. 
-    Since the nodes traveled in a traversal will be marked as visited, they will no further be called for any further DFS traversal. 
+    and visits all the nodes that are in that province, and at the same time, it will also mark them as visited. 
+    Since the nodes traveled in a traversal will be marked as visited, 
+    they will no further be called for any further DFS traversal. 
     Keep repeating these steps, for every node that you find unvisited, and visit the entire province. 
     Add a counter variable to count the number of times the DFS function is called, as in this 
     way we can count the total number of starting nodes, which will give us the number of provinces.
-    */
+*/
 
 
 #include<bits/stdc++.h>

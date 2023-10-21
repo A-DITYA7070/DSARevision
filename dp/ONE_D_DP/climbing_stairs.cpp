@@ -49,7 +49,7 @@ class ONEDDP{
     int solveMemoisation(int ind,vector<int>&dp){
         if(ind<=2)return ind;
         if(dp[ind]!=-1)return dp[ind];
-        int oneStep = solveMemoisation(ind-1,dp);
+        int oneStep=solveMemoisation(ind-1,dp);
         int twoStep=solveMemoisation(ind-2,dp);
         return dp[ind]=oneStep+twoStep;
     }
@@ -70,7 +70,6 @@ class ONEDDP{
         }
         return dp[ind];
     }
-
 };
 int main(){
 int n;
