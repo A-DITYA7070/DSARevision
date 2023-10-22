@@ -54,7 +54,7 @@
  *  if traversal in four direction ( -|- ) i.e ( up down left and right ) is needed use this concept 
  *  ( VVI ) :- 
  *              int dx[4] = {-1,0,1,0};
-                int dy[4] = {0,1,-1,0};
+                int dy[4] = {0,1,0,-1};
  */
 
 #include<bits/stdc++.h>
